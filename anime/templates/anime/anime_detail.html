@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ anime.title }} - OtakuVerse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-4">
+    <a href="/" class="btn btn-secondary mb-3">⬅ Back to List</a>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ anime.image }}" alt="{{ anime.title }}" class="img-fluid rounded shadow-sm">
+      </div>
+      <div class="col-md-8">
+        <h2>{{ anime.title }}</h2>
+        <p><strong>Genre:</strong> {{ anime.genre }}</p>
+        <p><strong>Rating:</strong> ⭐ {{ anime.rating }}</p>
+        <p><strong>Year:</strong> {{ anime.release_year }}</p>
+        <hr>
+        <p>{{ anime.synopsis }}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
