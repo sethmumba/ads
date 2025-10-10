@@ -7,10 +7,37 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .anime-card img { height: 250px; object-fit: cover; }
+    .ad-banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      max-width: 100%;
+      border: none;
+    }
   </style>
 </head>
 <body class="bg-light">
   <div class="container mt-4">
+
+    <!-- 🔹 TOP BANNER -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '2ecc315fc69bbe54e9b14597edab05d3',
+          'format' : 'iframe',
+          'height' : 60,
+          'width' : 468,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
+    </div>
+
     <h1 class="text-center mb-4">🌸 OtakuVerse - Top Animes</h1>
 
     <form method="get" class="mb-4 text-center">
@@ -18,10 +45,24 @@
       <button class="btn btn-primary">Search</button>
     </form>
 
+    <!-- 🔹 INLINE MID BANNER -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '09918d69a2802622cab8b3a046ccc1ba',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
+    </div>
+
     <div class="row">
       {% for anime in animes %}
       <div class="col-md-3 mb-4">
-        <div class="card anime-card">
+        <div class="card anime-card shadow-sm">
           <img src="{{ anime.image }}" class="card-img-top" alt="{{ anime.title }}">
           <div class="card-body">
             <h5 class="card-title">{{ anime.title }}</h5>
@@ -30,10 +71,53 @@
           </div>
         </div>
       </div>
-      {% empty %}
-      <p>No anime found.</p>
+
+      {% if forloop.counter|divisibleby:4 %}
+      <!-- 🔹 MID GRID BANNER -->
+      <div class="col-12 ad-banner">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '09918d69a2802622cab8b3a046ccc1ba',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
+      </div>
+      {% endif %}
       {% endfor %}
     </div>
+
+    <!-- 🔹 SIDEBAR / EXTRA BANNER -->
+    <div class="ad-banner">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '2ecc315fc69bbe54e9b14597edab05d3',
+          'format' : 'iframe',
+          'height' : 60,
+          'width' : 468,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
+    </div>
+
+    <!-- 🔹 FOOTER BANNER -->
+    <div class="ad-banner mt-4">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '09918d69a2802622cab8b3a046ccc1ba',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
+    </div>
+
   </div>
 </body>
 </html>
