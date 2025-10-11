@@ -4,22 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ anime.title }} - OtakuVerse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
+    body { background-color: #f8f9fa; }
     .ad-banner {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 20px 0;
+      margin: 20px auto;
+      max-width: 100%;
+      overflow: hidden;
     }
+    iframe { max-width: 100%; border: none; }
   </style>
 </head>
-<body class="bg-light">
+<body>
+
   <div class="container mt-4">
 
-    <!-- ✅ Top banner ad -->
+    <!-- 🔹 TOP BANNER -->
     <div class="ad-banner">
-      <script type="text/javascript">
+      <script async type="text/javascript">
         atOptions = {
           'key' : '2ecc315fc69bbe54e9b14597edab05d3',
           'format' : 'iframe',
@@ -28,18 +37,19 @@
           'params' : {}
         };
       </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
+      <script async type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
     </div>
 
     <a href="/" class="btn btn-secondary mb-3">⬅ Back to List</a>
 
     <div class="row">
-      <div class="col-md-4">
+      <!-- 🖼️ Left column: anime image + sidebar ad -->
+      <div class="col-md-4 mb-3">
         <img src="{{ anime.image }}" alt="{{ anime.title }}" class="img-fluid rounded shadow-sm">
-        
-        <!-- ✅ Sidebar ad (small box under the image) -->
-        <div class="ad-banner">
-          <script type="text/javascript">
+
+        <!-- 🔹 SIDEBAR AD -->
+        <div class="ad-banner mt-3">
+          <script async type="text/javascript">
             atOptions = {
               'key' : '09918d69a2802622cab8b3a046ccc1ba',
               'format' : 'iframe',
@@ -48,10 +58,11 @@
               'params' : {}
             };
           </script>
-          <script type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
+          <script async type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
         </div>
       </div>
 
+      <!-- 📄 Right column: details + inline ad -->
       <div class="col-md-8">
         <h2>{{ anime.title }}</h2>
         <p><strong>Genre:</strong> {{ anime.genre }}</p>
@@ -60,9 +71,9 @@
         <hr>
         <p>{{ anime.synopsis }}</p>
 
-        <!-- ✅ Inline ad inside the content -->
+        <!-- 🔹 INLINE AD -->
         <div class="ad-banner">
-          <script type="text/javascript">
+          <script async type="text/javascript">
             atOptions = {
               'key' : '09918d69a2802622cab8b3a046ccc1ba',
               'format' : 'iframe',
@@ -71,14 +82,14 @@
               'params' : {}
             };
           </script>
-          <script type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
+          <script async type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
         </div>
       </div>
     </div>
 
-    <!-- ✅ Footer ad -->
-    <div class="ad-banner">
-      <script type="text/javascript">
+    <!-- 🔹 FOOTER AD -->
+    <div class="ad-banner mt-4">
+      <script async type="text/javascript">
         atOptions = {
           'key' : '2ecc315fc69bbe54e9b14597edab05d3',
           'format' : 'iframe',
@@ -87,7 +98,7 @@
           'params' : {}
         };
       </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
+      <script async type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
     </div>
 
   </div>
