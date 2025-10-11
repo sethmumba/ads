@@ -11,58 +11,20 @@
 
   <style>
     body { background-color: #f8f9fa; }
-    .ad-banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px auto;
-      max-width: 100%;
-      overflow: hidden;
-    }
-    iframe { max-width: 100%; border: none; }
   </style>
 </head>
 <body>
 
   <div class="container mt-4">
-
-    <!-- 🔹 TOP BANNER -->
-    <div class="ad-banner">
-      <script async type="text/javascript">
-        atOptions = {
-          'key' : '2ecc315fc69bbe54e9b14597edab05d3',
-          'format' : 'iframe',
-          'height' : 60,
-          'width' : 468,
-          'params' : {}
-        };
-      </script>
-      <script async type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
-    </div>
-
     <a href="/" class="btn btn-secondary mb-3">⬅ Back to List</a>
 
     <div class="row">
-      <!-- 🖼️ Left column: anime image + sidebar ad -->
+      <!-- 🖼️ Left column: anime image -->
       <div class="col-md-4 mb-3">
         <img src="{{ anime.image }}" alt="{{ anime.title }}" class="img-fluid rounded shadow-sm">
-
-        <!-- 🔹 SIDEBAR AD -->
-        <div class="ad-banner mt-3">
-          <script async type="text/javascript">
-            atOptions = {
-              'key' : '09918d69a2802622cab8b3a046ccc1ba',
-              'format' : 'iframe',
-              'height' : 250,
-              'width' : 300,
-              'params' : {}
-            };
-          </script>
-          <script async type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
-        </div>
       </div>
 
-      <!-- 📄 Right column: details + inline ad -->
+      <!-- 📄 Right column: anime details -->
       <div class="col-md-8">
         <h2>{{ anime.title }}</h2>
         <p><strong>Genre:</strong> {{ anime.genre }}</p>
@@ -70,37 +32,9 @@
         <p><strong>Year:</strong> {{ anime.release_year }}</p>
         <hr>
         <p>{{ anime.synopsis }}</p>
-
-        <!-- 🔹 INLINE AD -->
-        <div class="ad-banner">
-          <script async type="text/javascript">
-            atOptions = {
-              'key' : '09918d69a2802622cab8b3a046ccc1ba',
-              'format' : 'iframe',
-              'height' : 250,
-              'width' : 300,
-              'params' : {}
-            };
-          </script>
-          <script async type="text/javascript" src="//www.highperformanceformat.com/09918d69a2802622cab8b3a046ccc1ba/invoke.js"></script>
-        </div>
       </div>
     </div>
-
-    <!-- 🔹 FOOTER AD -->
-    <div class="ad-banner mt-4">
-      <script async type="text/javascript">
-        atOptions = {
-          'key' : '2ecc315fc69bbe54e9b14597edab05d3',
-          'format' : 'iframe',
-          'height' : 60,
-          'width' : 468,
-          'params' : {}
-        };
-      </script>
-      <script async type="text/javascript" src="//www.highperformanceformat.com/2ecc315fc69bbe54e9b14597edab05d3/invoke.js"></script>
-    </div>
-
   </div>
+
 </body>
 </html>
